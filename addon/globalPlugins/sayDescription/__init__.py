@@ -15,6 +15,8 @@ import ui
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
+	scriptCategory = u"sayDescription"
+
 	def script_sayFocusObj(self, gesture):
 		focusObj = api.getFocusObject()
 		fOName = focusObj.name
@@ -22,12 +24,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
 
+	script_sayFocusObj.__doc__ = _(u"초점을 받은 객체의 description 값을 확인합니다.")
+
 	def script_sayNavObj(self, gesture):
 		focusObj = api.getNavigatorObject()
 		fOName = focusObj.name
 		fODc = focusObj.description
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
+
+	script_sayNavObj.__doc__ = _(u"탐색 객체의 description 값을 확인합니다.")
 
 	__gestures = {
 		"kb:NVDA+Shift+LeftArrow":"sayFocusObj",
