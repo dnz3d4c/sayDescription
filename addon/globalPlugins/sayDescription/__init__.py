@@ -19,33 +19,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		focusObj = api.getFocusObject()
 		fOName = focusObj.name
 		fODc = focusObj.description
-		tmpText = u"None"
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
-		elif scriptHandler.getLastScriptRepeatCount() == 1:
-			if focusObj.name == None:
-				cpText = u"name: " + tmpText + u"\tDescription: " + fODc
-				api.copyToClip(cpText)
-			if focusObj.description == None:
-				cpText = u"name: " + fOName + u"\tDescription: " + tmpText
-				api.copyToClip(cpText)
-				ui.message(u"복사")
 
 	def script_sayNavObj(self, gesture):
 		focusObj = api.getNavigatorObject()
 		fOName = focusObj.name
 		fODc = focusObj.description
-		tmpText = u"None"
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
-		elif scriptHandler.getLastScriptRepeatCount() == 1:
-			if focusObj.name == None:
-				cpText = u"name: " + tmpText + u"\tDescription: " + fODc
-				api.copyToClip(cpText)
-			if focusObj.description == None:
-				cpText = u"name: " + fOName + u"\tDescription: " + tmpText
-				api.copyToClip(cpText)
-				ui.message(u"복사")
 
 	__gestures = {
 		"kb:NVDA+Shift+LeftArrow":"sayFocusObj",
