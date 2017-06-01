@@ -27,11 +27,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_sayFocusObj.__doc__ = _(u"초점을 받은 객체의 description 값을 확인합니다.")
 
 	def script_sayNavObj(self, gesture):
-		focusObj = api.getNavigatorObject()
-		fOName = focusObj.name
-		fODc = focusObj.description
+		navObj = api.getNavigatorObject()
+		navOName = navObj.name
+		navODc = navObj.description
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
+			ui.message(u"Name: %s, Description: %s" % (navOName, navODc))
 
 	script_sayNavObj.__doc__ = _(u"탐색 객체의 description 값을 확인합니다.")
 
