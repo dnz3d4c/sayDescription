@@ -4,7 +4,7 @@
 
 - 초점을 받은 객체 또는 탐색 객체의 description 속성을 확인할 수 있습니다.
 - 라이센스: gpl 2.0
-- [1.0.2 Download](https://github.com/dnz3d4c/sayDescription/releases/download/1.0.2/sayDescription-1.0.2.nvda-addon)
+- [1.0.2.2 Download](https://github.com/dnz3d4c/sayDescription/releases/download/1.0.2.2/sayDescription-1.0.2.2.nvda-addon)
 
 초점을 받은 객체 또는 탐색 객체의 description 속성을 확인할 수 있습니다. 이 추가 기능은 브라우즈 모드에서 각 요소별 title 속성 등을 확인하는 데 사용될 수 있습니다. 추가 기능을 설치한 다음, NVDA 메뉴 -> 설정 -> 단축키 설정 메뉴의 'SayDescription' 분류에서 단축키를 할당한 다음 사용해야 합니다.
 
@@ -18,3 +18,6 @@
 	- 이제 사용자가 추가 기능 설치 시 추가 기능에서 제공하는 기능들의 단축키를 먼저 할당해야 함 ([#1](https://github.com/dnz3d4c/sayDescription/issues/1))
 - 1.0.2.1:
 	- 1.2 버전에 맞게 추가 기능 문서 수정 ([#2](https://github.com/dnz3d4c/sayDescription/issues/2))
+- 1.0.2.2:
+	- 저작권 문구 수정
+	- 다운로드 URL 수정

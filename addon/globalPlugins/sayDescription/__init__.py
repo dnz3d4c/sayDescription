@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # sayDescritpion: 
 
-#Copyright (C) 2017 Aheu
+#Copyright 2018 dnz3d4c
 
 #This file is covered by the GNU General Public License.
 #See the file COPYING for more details.
