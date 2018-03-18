@@ -34,9 +34,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(u"Name: %s, Description: %s" % (navOName, navODc))
 
 	script_sayNavObj.__doc__ = _(u"탐색 객체의 description 값을 확인합니다.")
-
-	__gestures = {
-		"kb:NVDA+Shift+LeftArrow":"sayFocusObj",
-		"kb:NVDA+Shift+RightArrow":"sayNavObj"
-	}
-	
