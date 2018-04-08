@@ -9,6 +9,7 @@
 
 import addonHandler
 import api
+import controlTypes
 import globalPluginHandler
 import scriptHandler
 import ui
@@ -22,7 +23,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		fOName = focusObj.name
 		fODc = focusObj.description
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
+			if focusObj.role == controlTypes.ROLE_UNKNOWN:
+				ui.message(u"알 수 없는 객체: 값을 확인할 수 없음.")
+			else:
+				ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
 
 	script_sayFocusObj.__doc__ = _(u"초점을 받은 객체의 description 값을 확인합니다.")
 
@@ -31,6 +35,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		navOName = navObj.name
 		navODc = navObj.description
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			ui.message(u"Name: %s, Description: %s" % (navOName, navODc))
+			if navObj.role == controlTypes.ROLE_UNKNOWN:
+				ui.message(u"알 수 없는 객체: 값을 확인할 수 없음.")
+			else:
+				ui.message(u"Name: %s, Description: %s" % (navOName, navODc))
 
 	script_sayNavObj.__doc__ = _(u"탐색 객체의 description 값을 확인합니다.")
