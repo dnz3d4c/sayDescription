@@ -25,6 +25,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			if focusObj.role == controlTypes.ROLE_UNKNOWN:
 				ui.message(u"알 수 없는 객체: 값을 확인할 수 없음.")
+			if fOName == "":
+				ui.message(u"Description: %s" % (fODc))
+			elif fODc == "":
+				ui.message(u"Name: %s" % (fOName))
 			else:
 				ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
 
@@ -37,6 +41,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if scriptHandler.getLastScriptRepeatCount() == 0:
 			if navObj.role == controlTypes.ROLE_UNKNOWN:
 				ui.message(u"알 수 없는 객체: 값을 확인할 수 없음.")
+			if navOName == "":
+				ui.message(u"Description: %s" % (navODc))
+			elif navODc == "":
+				ui.message(u"Name: %s" % (navOName))
 			else:
 				ui.message(u"Name: %s, Description: %s" % (navOName, navODc))
 
