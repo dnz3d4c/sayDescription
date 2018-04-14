@@ -31,6 +31,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ui.message(u"알 수 없는 객체: 값을 확인할 수 없음.")
 			else:
 				ui.message(u"Name: %s, Description: %s" % (fOName, fODc))
+		if scriptHandler.getLastScriptRepeatCount() == 1:
+			if focusObj.role == controlTypes.ROLE_UNKNOWN:
+				ui.message(u"알 수 없는 객체: 값을 확인할 수 없음.")
+			else:
+				convertName = unicode(fOName)
+				convertDescription = unicode(fODc)
+				cpText = u"Name: " + convertName + u"\t" + u"Description: " + convertDescription
+				api.copyToClip(cpText)
+				ui.message(u"복사됨")
 
 	script_sayFocusObj.__doc__ = _(u"초점을 받은 객체의 description 값을 확인합니다.")
 
@@ -47,5 +56,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				ui.message(u"알 수 없는 객체: 값을 확인할 수 없음.")
 			else:
 				ui.message(u"Name: %s, Description: %s" % (navOName, navODc))
+		if scriptHandler.getLastScriptRepeatCount() == 1:
+			if navObj.role == controlTypes.ROLE_UNKNOWN:
+				ui.message(u"알 수 없는 객체: 값을 확인할 수 없음.")
+			else:
+				convertName = unicode(navOName)
+				convertDescription = unicode(navODc)
+				cpText = u"Name: " + convertName + u"\t" + u"Description: " + convertDescription
+				api.copyToClip(cpText)
+				ui.message(u"복사됨")
 
 	script_sayNavObj.__doc__ = _(u"탐색 객체의 description 값을 확인합니다.")
