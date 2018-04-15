@@ -23,7 +23,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		fOName = focusObj.name
 		fODc = focusObj.description
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			if fOName == "":
+			if fOName == "" and fODc == "":
+				ui.message(u"name과 description 값은 비어있음.")
+			elif fOName == "":
 				ui.message(u"Description: %s" % (fODc))
 			elif fODc == "":
 				ui.message(u"Name: %s" % (fOName))
@@ -48,7 +50,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		navOName = navObj.name
 		navODc = navObj.description
 		if scriptHandler.getLastScriptRepeatCount() == 0:
-			if navOName == "":
+			if navOName == "" and navODc == "":
+				ui.message(u"name과 description 값은 비어있음.")
+			elif navOName == "":
 				ui.message(u"Description: %s" % (navODc))
 			elif navODc == "":
 				ui.message(u"Name: %s" % (navOName))
