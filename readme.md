@@ -17,7 +17,7 @@
 	- 추가 기능 관리자에서 추가 기능 버전 정보가 바르게 표시되도록 함
 	- 이제 사용자가 추가 기능 설치 시 추가 기능에서 제공하는 기능들의 단축키를 먼저 할당해야 함 ([#1](https://github.com/dnz3d4c/sayDescription/issues/1))
 - 1.0.2.1:
-	- 1.2 버전에 맞게 추가 기능 문서 수정 ([#2](https://github.com/dnz3d4c/sayDescription/issues/2))
+	- 1.0.2 버전에 맞게 추가 기능 문서 수정 ([#2](https://github.com/dnz3d4c/sayDescription/issues/2))
 - 1.0.2.2:
 	- 저작권 문구 수정
 	- 다운로드 URL 수정
